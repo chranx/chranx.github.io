@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+mcard.itscard.co.kr	TRUE	/	FALSE	1999999999	itscard	mcard=tomjinah
+mcard.itscard.co.kr	TRUE	/	FALSE	1999999999	ASPSESSIONIDQSCQTSQS	KDIHJOKBOBICLNIHIAJKOPPJ
+
