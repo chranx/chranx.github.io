@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:referrer="http://a9.com/-/opensearch/extensions/referrer/1.0/">
-    <ShortName>카카오맵</ShortName>
-    <Description>카카오맵에서 검색</Description>
-    <Url template="https://map.kakao.com/?q={searchTerms}&amp;service=opensearch" type="text/html"/>
-    <InputEncoding>UTF-8</InputEncoding>
-    <Image height="16" type="image/x-icon" width="16">https://map.kakao.com/favicon.ico</Image>
-</OpenSearchDescription>
