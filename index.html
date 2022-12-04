@@ -62,8 +62,8 @@
 <script type="text/javascript" src="https://chranx.github.io/new_m/mcard/js/common.js?ver=1.2.0"></script>
 <script type="text/javascript" src="https://chranx.github.io/new_m/mcard/js/ajax_common.js"></script>
 <!--<script type="text/javascript" src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>-->
-<script type="text/javascript" src="http://developers.kakao.com/sdk/js/kakao.min.js"></script>
-<script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=81acfc4a0b16da2dec79be4b734d08b8&amp;libraries=services"></script>
+<script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=81acfc4a0b16da2dec79be4b734d08b8&amp;libraries=services"></script>
 
 <link rel="stylesheet" type="text/css" href="https://chranx.github.io/new_m/mcard/css/magnify.css" />
 <script type="text/javascript" src="https://chranx.github.io/new_m/mcard/js/jquery.magnify.js"></script>
@@ -872,8 +872,8 @@ $(".imgs").on("touchstart",function(e){
 		function popMagnify(imgSrc){
 			var $magnify = $('.magnify');
 			var $lensFullscreen = $('.lens-fullscreen');
-			var $magnifyFullscreen = $('.magnify-fullscreen');			
-			$lensFullscreen.html('<img src="http://mcard.itscard.co.kr/'&#32;+&#32;imgSrc&#32;+&#32;'" data-scale="1" data-translate-x="0" data-translate-y="0">');			
+			var $magnifyFullscreen = $('.magnify-fullscreen');
+			$lensFullscreen.html('<img src="' + imgSrc + '" data-scale="1" data-translate-x="0" data-translate-y="0">');						
 			$magnifyFullscreen.show();			
 			$lensFullscreen.scrollLeft(0);
 			$lensFullscreen.scrollTop(0);
@@ -946,14 +946,14 @@ $(".imgs").on("touchstart",function(e){
 				case 'facebook':
 					o = {
 						method:'popup',
-						url:'http://www.facebook.com/sharer/sharer.php?u=' + _url
+						url:'https://www.facebook.com/sharer/sharer.php?u=' + _url
 					};
 					break;
 		 
 				case 'twitter':
 					o = {
 						method:'popup',
-						url:'http://twitter.com/intent/tweet?text=' + _txt + '&url=' + _url
+						url:'https://twitter.com/intent/tweet?text=' + _txt + '&url=' + _url
 					};
 					break;	 
 				
