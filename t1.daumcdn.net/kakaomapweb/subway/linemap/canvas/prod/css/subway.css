@@ -1,0 +1,242 @@
+.subwayRouteView canvas {
+  position: absolute;
+}
+
+.subwayRouteView .subway-container {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+}
+
+.subwayRouteView .subway-area-loading { 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 500;
+}
+
+.subwayRouteView .subway-area-loading .inner-loading {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 30px 15px;
+  width: 188px;
+  height: 184px;
+  background: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+}
+
+.subwayRouteView .subway-area-loading .img-loading {
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
+
+.subwayRouteView .subway-area-loading .desc-loading {
+  margin-top: 25px;
+  font-size: 12px;
+  text-align: center;
+  color: #333333;
+  line-height: 18px;
+}
+
+.subwayRouteView .subway-info-pin {
+  position: absolute;
+  width: 38px;
+  height: 52px;
+  z-index: 2;
+  cursor: grab;
+}
+
+.subwayRouteView .subway-info-pin.subway-info-pin-departure{
+  background: url(../../devel/img_common/startPointer.png) no-repeat;
+  background-size: 38px 52px;
+}
+
+.subwayRouteView .subway-info-pin.subway-info-pin-arrival{
+  background: url(../../devel/img_common/endPointer.png) no-repeat;
+  background-size: 38px 52px;
+}
+
+
+.subwayRouteView .subway-info-pin .subway-info-pin-object {
+  width: 100%;
+  cursor: grab;
+  vertical-align: top;
+}
+
+.subwayRouteView .subway-info-pin .subway-info-pin-controller {
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+  height: 18px;
+  left: 29px;
+  top: -1px;
+}
+
+.subwayRouteView .subway-info-pin:hover .subway-info-pin-controller {
+  display: block;
+  transition: all 0.5s;
+}
+
+.subwayRouteView .subway-info-pin .subway-info-pin-controller .subway-info-pin-close {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../../devel/img_common/pointerClose.png) no-repeat;
+  background-size: 18px 18px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.subwayRouteView .subway-info-pin .subway-info-pin-tooltip {
+  background-color: #888FA5;
+  border: 1px solid #6b748e;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 10px;
+  padding: 0 8px;
+  line-height: 16px;
+  vertical-align: top;
+  margin-left: 1px;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+/* 툴팁 공통 */
+.subwayRouteView .subway-info-route {
+  position: absolute;
+  padding: 8px 9px 5px 9px;
+  border: 1px solid rgba(0, 0, 0, .5);
+  border-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: grab;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.subwayRouteView .subway-info-tooltip-station {
+  cursor: initial;
+  padding: 8px 9px 5px 9px;
+}
+
+.os_mac .subwayRouteView .subway-info-tooltip-transfer {
+  padding: 9px 9px 5px 9px;
+}
+
+.subwayRouteView .subway-info-tooltip-transfer {
+  padding: 7px 9px 6px 9px;
+}
+
+.subwayRouteView .subway-info-route-result {
+  overflow: hidden;
+  padding: 8px 8px 6px 9px;
+  min-width: 74px;
+  text-align: center;
+}
+
+.subwayRouteView .subway-info-tooltip-station::after {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 7px;
+  height: 7px;
+  margin-left: -4px;
+  border-right: 1px solid rgba(0, 0, 0, .5);
+  border-bottom: 1px solid rgba(0, 0, 0, .5);
+  transform: rotate(45deg);
+  background: #fff;
+  content: '';
+}
+
+.subwayRouteView .subway-info-tooltip-station::before {
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 20px;
+  content: '';
+}
+
+.subwayRouteView .subway-info-link-station  {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.subwayRouteView .subway-info-link-station .subway-ico-arrow {
+  margin-left: 6px;
+}
+
+.subwayRouteView .subway-info-link-station :hover,
+.subwayRouteView .subway-info-tooltip-link-transfertime:hover {
+  text-decoration: none;
+}
+
+/* 빠른환승 툴팁 */
+.subwayRouteView .subway-info-tooltip-transfer-way {
+  margin-top: 1px;
+}
+
+.subwayRouteView .subway-info-tooltip-transfer-way,
+.subwayRouteView .subway-info-tooltip-link-transfertime {
+  display: block;
+  color: #1f8cff;
+}
+
+/* 결과툴팁 */
+.subwayRouteView .subway-info-route-result dt,
+.subwayRouteView .subway-info-route-result dd {
+  text-align: left;
+}
+.subwayRouteView .subway-info-route-result .subway-info-route-result-time {
+  font-weight: bold;
+}
+.subwayRouteView .subway-info-route-result .subway-info-route-result-time .subway-info-text-em {
+  color: #1f8cff;
+  margin-right: 5px;
+}
+.subwayRouteView .subway-info-route-result .subway-info-route-result-cash,
+.subwayRouteView .subway-info-route-result .subway-info-route-result-card {
+  color: #666;
+  margin-top:1px
+}
+
+.subwayRouteView .subway-info-route-result .subway-info-route-close {
+  display: block;
+  padding-top: 8px;
+  margin: 8px 1px 0 0;
+}
+
+.subwayRouteView .subway-info-route-result .subway-info-route-close::before {
+  position: absolute;
+  left: 0;
+  width: 100%; 
+  height: 1px;
+  background: #e2e2e2;
+  content: '';
+  margin-top: -8px;
+  transition: margin-top 0.5s;
+}
+
+.subwayRouteView .subway-info-route-result .subway-info-route-close:hover {
+  text-decoration: none;
+}
